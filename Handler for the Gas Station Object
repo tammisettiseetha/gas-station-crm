@@ -1,0 +1,12 @@
+trigger beforeInsert on Gas_Station__c (before insert ) {
+
+    if(trigger.isbefore && trigger.isinsert){ 
+
+            FuelRecordHandler.beforeDeleteGas(trigger.new);
+
+    }
+
+    
+
+}
+
